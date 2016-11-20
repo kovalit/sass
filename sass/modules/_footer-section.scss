@@ -1,0 +1,25 @@
+/******************************** footer-section ********************************/
+
+$b: ".footer-section";
+
+#{$b} {
+  color: $white;
+}
+
+#{$b}__title {
+  	font-size: 13px;
+	@include fontMuseoSuperBold;
+  	text-transform: uppercase;
+	@include breakpoint(max-width 650px) {
+		margin-bottom: 0.4em;
+	}
+}
+
+#{$b}__text {
+  @include fontMuseoSuperLight;
+  font-size: 14px;
+  line-height: 130%;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  opacity: .8;
+}

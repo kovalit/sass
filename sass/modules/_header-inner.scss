@@ -1,0 +1,34 @@
+/******************************** header-inner ********************************/
+
+$b: ".header-inner";
+
+#{$b} {
+	text-align: center;
+	display: table;
+	height: inherit;
+}
+
+#{$b}__title {
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+	@include breakpoint(max-width 700px) {
+		font-size: 65px;
+	}
+	@include breakpoint(max-width 590px) {
+		font-size: 50px;
+	}
+}
+
+#{$b}__description {
+	margin-top: 55px;
+	@include fontMuseoSuperLight;
+	font-size: 25px;
+	color: $white;
+	@include breakpoint(max-width 700px) {
+		font-size: 17px;
+	}
+	@include breakpoint(max-width 420px) {
+		@include gutter(3);
+	}
+}

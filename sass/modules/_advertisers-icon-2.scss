@@ -1,0 +1,58 @@
+/******************************** advertisers-icon-2 ********************************/
+
+//sprite
+$advertisers-icon-2-spacing: 5px;
+@import "inner-pages/advertisers/icons/fly/advertisers-icon-2/*.png";
+
+@mixin advertisers-icon-2-sp($name) {
+	@include advertisers-icon-2-sprite($name);
+	width: advertisers-icon-2-sprite-width($name);
+	height: advertisers-icon-2-sprite-height($name);
+}
+
+
+$b: ".advertisers-icon-2";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+	i {
+	  display: block;
+	  position: absolute;
+	  background-repeat: no-repeat;
+	}
+}
+
+#{$b}__graph_1 {
+	@include  advertisers-icon-2-sp('d_1');
+	top: 37px;
+	right: 57px;
+}
+
+#{$b}__graph_2 {
+	@include  advertisers-icon-2-sp('d_2');
+	bottom: 50px;
+	right: 15px;
+
+}
+
+#{$b}__graph_3 {
+	@include  advertisers-icon-2-sp('d_3');
+	top: 75px;
+	left: 13px;
+}
+
+#{$b}__hand {
+	background: image-url("inner-pages/advertisers/icons/fly/advertisers-icon-2/hand.png") no-repeat 45% 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+}

@@ -1,0 +1,44 @@
+/******************************** footer ********************************/
+
+$b: ".footer";
+
+#{$b} {
+	@extend %clearfix;
+	padding-top: 1.8em;
+}
+
+#{$b}__item {
+	@include span(2 of 12);
+
+	@include breakpoint(max-width 950px) {
+	  @include span(3 of 12);
+	}
+
+	@include breakpoint(max-width 650px) {
+		float: none;
+		width: 100%;
+	}
+}
+
+#{$b}__item_last {
+	@include span(4 of 12 last);
+
+	@include breakpoint(max-width 950px) {
+		padding-top: 20px;
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+}
+
+#{$b}__copyright {
+	margin: 0;
+	clear: both;
+	padding: 3em 0 2em 0;
+	opacity: .6;
+	padding-left: gutter(12);
+	@include fontMuseoSuperLight;
+	font-size: 12px;
+	color: $white;
+}
+

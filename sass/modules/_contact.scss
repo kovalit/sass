@@ -1,0 +1,56 @@
+/******************************** contact ********************************/
+
+$b: ".contact";
+
+#{$b} {
+	width: 100%;
+}
+
+#{$b}__text {
+	margin-top: 81px;
+	text-align: center;
+	padding: 0 span(1 of 12);
+	@include fontMuseoLight;
+	font-size: 21px;
+	line-height: 140%;
+	color: $blue;
+	@include breakpoint(max-width 900px) {
+		margin-top: 51px;
+	}
+	@include breakpoint(max-width 700px) {
+		font-size: 17px;	
+	}
+
+	span {
+		display: block;
+		margin-top: 33px;
+		font-size: 15px;
+	}
+	a {
+		font-size: 21px;
+		@include breakpoint(max-width 700px) {
+			font-size: 17px;	
+		}
+	}
+}
+
+#{$b}__message {
+	margin-bottom: 200px;  
+	@include breakpoint(max-width 900px) {
+		margin-bottom: 120px; 
+	}
+	
+	@include breakpoint(max-width 700px) {
+		margin-bottpm: 70px; 
+	}
+}
+
+#{$b}__form {
+	max-width: 350px;
+	margin: 27px auto 60px auto;
+	@include gutter(5);
+	@include breakpoint(max-width 900px) {
+		margin-bottom: 30px;
+	}
+}
+

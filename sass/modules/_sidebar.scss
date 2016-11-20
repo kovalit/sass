@@ -1,0 +1,97 @@
+/******************************** sidebar ********************************/
+
+$b: ".sidebar";
+
+#{$b} {
+	margin-top: -10px;
+	@include breakpoint(max-width 900px) {
+		display: none;
+	}
+}
+
+#{$b}_inner {
+	margin: 10px 0 23px 14px;
+	#{$b}__item {
+		padding: 0;
+	}
+}
+
+#{$b}__item {
+	padding-left: 14px;
+	line-height: 222%;
+
+	&.active > a {
+		color: $orange;
+	}
+
+
+	a {
+		display: block;
+		position: relative;
+		text-decoration: none;
+		@include fontMuseoLight;
+		font-size: 17px;
+		color: $blue;
+
+		&:hover {
+			color: $orange;
+		}
+
+
+		&.mark {
+			@include after {
+				position: absolute;
+				top: 39%;
+				left: -14px;
+				width: 4px;
+				height: 4px;
+				@include border-radius(2px);
+				background-color: $blue;
+			}
+			&:hover {
+				@include after {
+					background-color: $orange;
+				}
+			}
+			&.active {
+				@include after {
+					background-color: $orange;
+				}
+			}
+		}
+	}
+}
+
+#{$b}-links {
+	display: none;
+	outline: none;
+	width:  span(5 of 9);
+	height: 30px;
+	margin-left: 4%;
+	margin-bottom: 40px;
+	@include breakpoint(max-width 900px) {
+		display: inline-block;
+	}
+	@include breakpoint(max-width 500px) {
+		width:  span(8 of 9);
+		margin-top: 5px;
+		display: block;
+	}
+}
+
+#{$b}-label {
+	display: none;
+	width: span(2 of 9);
+	@include fontMuseoLight;
+	font-size: 15px;
+	color: $blue;
+	text-align: right;
+	@include breakpoint(max-width 900px) {
+		display: inline-block;
+	}
+	@include breakpoint(max-width 500px) {
+		display: inline;
+		text-align: left;
+		margin-left: 13px;
+	}
+}

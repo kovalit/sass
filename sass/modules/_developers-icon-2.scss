@@ -1,0 +1,68 @@
+/******************************** developers-icon-2 ********************************/
+
+$developers-icon-2-spacing: 5px;
+@import "inner-pages/developers/icons/developers-icon-2/*.png";
+
+@mixin developers-icon-2-sp($name) {
+	@include developers-icon-2-sprite($name);
+	width: developers-icon-2-sprite-width($name);
+	height: developers-icon-2-sprite-height($name);
+}
+
+
+$b: ".developers-icon-2";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+
+	i {
+	  display: block;
+	  position: absolute;
+	  background-repeat: no-repeat;
+	}
+}
+
+#{$b}__doll_1 {
+	@include developers-icon-2-sp('icon_1');
+	top: 81px;
+	left: 35px;
+}
+
+#{$b}__doll_2 {
+	@include developers-icon-2-sp('icon_2');
+	bottom: 66px;
+	right: 50px;
+}
+
+#{$b}__doll_3 {
+	@include developers-icon-2-sp('icon_3');
+	top: 14px;
+	left: 49%;
+
+}
+
+#{$b}__doll_4 {
+	@include developers-icon-2-sp('icon_4');
+	top: 27px;
+	right: 5px;
+	z-index: 10;
+}
+
+#{$b}__doll_5 {
+	@include developers-icon-2-sp('icon_3');
+	bottom: 98px;
+	left: 61px;
+
+}
+
+#{$b}__phone {
+	@include developers-icon-2-sp('phone');
+	top: 50px;
+	left: 90px;
+}
+

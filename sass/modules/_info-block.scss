@@ -1,0 +1,231 @@
+/******************************** info-block ********************************/
+
+$b: ".info-block";
+
+#{$b} {
+	text-align: center;
+	@extend %clearfix;
+	overflow: hidden;
+}
+
+#{$b}__icon {
+	margin-top: 55px;
+}
+
+//block's bottom space
+
+#{$b}_padding_bottom {
+	padding-bottom: 40px;
+}
+
+//no-overflow
+
+#{$b}_visible {
+	overflow: visible;
+}
+
+//adventize
+
+#{$b}_adventize {
+	#{$b}__title {
+		margin-top: 0.5em;
+		margin-bottom: 0.4em;
+	}
+	#{$b}__description {
+		margin-bottom: 3.8em;
+	}
+}
+
+//last item without float, full width
+
+//#{$b}_lastChild_full {
+//	#{$b}__item:last-child {
+//		@include breakpoint(650px 935px) {
+//			@include span(full);
+//		}
+//	}
+//}
+
+//two-items
+
+#{$b}_2 {
+	#{$b}__item {
+		@include span(6 of 12);
+		@include gutter(3);
+		@include breakpoint(max-width 650px) {
+		  @include span(full);
+//		  @include gutter(2);
+		  &:not(:last-of-type) {
+			margin-bottom: 30px;
+		  }
+		}
+	//description width
+		.info-block-item__description {
+			padding: 0 15%;
+		}
+	}
+
+}
+
+//three-items
+
+#{$b}_3 {
+	color: $blue;
+
+	#{$b}__item {
+		@include span(4 of 12);
+		@include gutter(3);
+
+		@include breakpoint(650px 935px) {
+			@include span(6 of 12);
+		}
+
+		@include breakpoint(max-width 650px) {
+			@include span(full);
+			@include gutter(2);
+		}
+
+		@include breakpoint(max-width 650px) {
+			&:not(:first-of-type) {
+				margin-top: 2em;
+			}
+		}
+
+		&:last-child {
+
+			@include breakpoint(650px 935px) {
+				margin: 0 auto;
+//				padding-top: 10px;
+				float: none;
+				clear: both;
+			}
+
+		}
+
+		.info-block-item__title {
+			@include breakpoint(650px 935px) {
+				margin-top: 40px;
+			}
+		}
+
+	}
+}
+
+//four-items
+
+#{$b}_4 {
+	color: $white;
+
+	#{$b}__item {
+		@include span(3 of 12);
+		@include gutter(5);
+
+		@include breakpoint(max-width 850px) {
+			@include span(6 of 12);
+			@include gutter(3);
+			margin-bottom: 1em;
+		}
+		@include breakpoint(max-width 550px) {
+			@include span(full);
+		}
+	}
+
+	#{$b}__description {
+		margin-bottom: 3.7em;
+	}
+}
+
+
+//title
+
+#{$b}__title {
+	margin: 1.2em 0 0.6em 0;
+	line-height: 100%;
+	@include gutter(4);
+	@include breakpoint(max-width 700px) {
+		font-size: 60px;
+	}
+	@include breakpoint(max-width 590px) {
+		font-size: 45px;
+	}
+	@include breakpoint(max-width 420px) {
+		font-size: 35px;
+	}
+}
+
+//description
+
+#{$b}__description {
+	@include gutter(4);
+	margin-bottom: 1.5em;
+	line-height: 138%;
+	@include fontMuseoLight;
+	font-size: 21px;
+	@include breakpoint(max-width 700px) {
+		font-size: 17px;
+	}
+	@include breakpoint(max-width 590px) {
+		font-size: 14px;
+	}
+	@include breakpoint(max-width 420px) {
+		@include gutter(3);
+	}
+}
+
+//last-item
+
+#{$b}__item {
+	&:last-child {
+		@include last;
+	}
+}
+
+#{$b}_no_float {
+	#{$b}__item {
+		&:last-child {
+			float: none;
+		}
+	}
+}
+
+//padding
+
+#{$b}_padding {
+	padding: 20px 0 72px 0;
+
+	@include breakpoint(max-width 850px) {
+		padding-bottom: 0;
+	}
+}
+
+
+//for touch screens
+
+.touch {
+  #{$b}_touch {
+	@include breakpoint(max-width 850px) {
+	  #{$b}__item:last-child {
+		padding-top: 85px;
+	  }
+	}
+  }
+}
+
+.touch {
+  #{$b}_touch {
+	@include breakpoint(max-width 600px) {
+	  #{$b}__item:not(:first-of-type) {
+		padding-top: 45px;
+	  }
+	}
+  }
+}
+
+#{$b}_touch {
+	.info-block-item__title {
+		@include breakpoint(max-width 650px) {
+			margin-top: 40px;
+		}
+	}
+}
+

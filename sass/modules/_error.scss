@@ -1,0 +1,42 @@
+/******************************** error ********************************/
+
+$b: ".page-error";
+
+#{$b} {
+	text-align: center;
+	min-height: 600px;
+	width: 100%;
+	display: table;
+	padding: 40px 0;
+}
+
+#{$b}__icon {
+	max-width: 343px;
+	max-height: 235px;
+	display: inline-block;
+	width: 100%;
+}
+
+#{$b}__text {
+	margin: 50px 0 40px 0;
+	@include fontMuseoLight;
+	font-size: 21px;
+	color: $blue;
+	@include breakpoint(max-width 700px) {
+		font-size: 17px;
+	}
+}
+
+#{$b}__button {
+	width: span(2 of 12);
+	display: inline-block;
+	@include breakpoint(max-width 1000px) {
+		width: span(4 of 12);
+	}
+	@include breakpoint(max-width 520px) {
+		width: span(6 of 12);
+	}
+	@include breakpoint(max-width 350px) {
+		width: span(8 of 12);
+	}
+}

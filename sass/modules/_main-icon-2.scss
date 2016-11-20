@@ -1,0 +1,156 @@
+/******************************** main-icon-2 ********************************/
+
+//sprite
+$main-icon-2-spacing: 5px;
+@import "icons/best/main-icon-2/*.png";
+
+@mixin main-icon-2-sp($name) {
+	@include main-icon-2-sprite($name);
+	width: main-icon-2-sprite-width($name);
+	height: main-icon-2-sprite-height($name);
+}
+
+/*****************************************/
+
+
+$b: ".main-icon-2";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+
+  i {
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat;
+  }
+}
+
+#{$b}_top {
+	z-index: 2;
+}
+
+#{$b}__gear_inner_1 {
+	@include main-icon-2-sp('gear_inner_1');
+	top: 45px;
+	left: 85px;
+}
+
+#{$b}__gear_inner_2 {
+	@include main-icon-2-sp('gear_inner_2');
+	top: 93px;
+	left: 35px;
+}
+
+#{$b}__gear_inner_3 {
+	@include main-icon-2-sp('gear_inner_3');
+	top: 68px;
+	right: 15px;
+}
+
+
+#{$b}__gear_outer_1 {
+	@include main-icon-2-sp('gear_outer_1');
+	bottom: 12px;
+	right: -30px;
+	@include breakpoint(650px 770px) {
+		 right: 0;
+	 }
+	@include breakpoint(max-width 400px) {
+		right: 5px;
+	}
+
+}
+
+#{$b}__gear_outer_2 {
+	@include main-icon-2-sp('gear_outer_2');
+	bottom: 52px;
+	left: -25px;
+	@include breakpoint(650px 770px) {
+		left: -10px;
+	}
+	@include breakpoint(max-width 400px) {
+		left: -10px;
+	}
+}
+
+#{$b}__gear_outer_3 {
+	@include main-icon-2-sp('gear_outer_3');
+	bottom: 27px;
+	left: -25px;
+	@include breakpoint(650px 770px) {
+		left: -10px;
+	}
+	@include breakpoint(max-width 400px) {
+		left: -10px;
+	}
+}
+
+
+#{$b}__clock {
+	@include main-icon-2-sp('clock');
+	top: 113px;
+	right: 55px;
+}
+
+#{$b}__tv {
+	background:  image-url("icons/best/main-icon-2/tv.png") no-repeat 50% 75%;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#{$b}__cloud_1 {
+	@include main-icon-2-sp('cloud_1');
+	top: -15px;
+	left: 40px;
+}
+
+#{$b}__cloud_2 {
+	@include main-icon-2-sp('cloud_2');
+	top: -7px;
+	left: 88px;
+}
+
+
+#{$b}__line {
+	z-index: 3;
+}
+
+#{$b}__line_white {
+	border-top: 1px solid white;
+	width: 63px;
+}
+
+#{$b}__line_white_1 {
+	top: 98px;
+	left: 65px;
+	@include transform(rotate(-36deg));
+
+}
+
+#{$b}__line_white_2 {
+	top: 123px;
+	left: 90px;
+	@include transform(rotate(-52deg));
+}
+
+#{$b}__line_blue {
+	border-top: 1px solid #70D1DC;
+	width: 93px;
+}
+
+#{$b}__line_blue_1 {
+	top: 77px;
+	right: 37px;
+}
+
+#{$b}__line_blue_2 {
+	top: 100px;
+	right: 37px;
+	@include transform(rotate(-5deg));
+}

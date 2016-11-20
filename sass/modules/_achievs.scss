@@ -1,0 +1,123 @@
+/******************************** achiev ********************************/
+
+$b: ".achiev";
+
+#{$b} {
+	height: 274px;
+  	@extend %clearfix;
+	@include breakpoint(max-width 570px) {
+		height: 100%;
+		padding: 30px 0;
+	}
+}
+
+#{$b}_middle {
+  	border-top: 1px solid rgba($white, .3);
+  	border-bottom: 1px solid rgba($white, .3);
+	#{$b}__text {
+		@include last;
+		padding-left: span(1 of 12);
+		text-align: left;
+		@include breakpoint(max-width 570px) {
+			@include span(full);
+			float: none;
+			text-align: center;
+		}
+	}
+	#{$b}__icon {
+		text-align: right;
+		@include breakpoint(max-width 570px) {
+			display: none;
+		}
+	}
+}
+
+#{$b}__text {
+	margin: 0;
+  	height: inherit;
+  	display: table;
+	text-align: right;
+	@include span(7 of 12);
+	padding-right: span(1 of 12);
+	color: $white;
+
+	@include breakpoint(max-width 570px) {
+		@include span(full);
+		float: none;
+		text-align: center;
+	}
+
+  	p {
+	  display: table-cell;
+	  padding-top: .4em;
+	  position: relative;
+	  vertical-align: middle;
+	  line-height: 60%;
+	  @include breakpoint(max-width 830px) {
+			line-height: 90%;
+		    font-size: 60px;
+	  }
+	  @include breakpoint(max-width 670px) {
+			font-size: 50px;
+	  }
+	  @include breakpoint(max-width 501px) {
+			font-size: 40px;
+		  	line-height: 90%;
+	  }
+
+	  .text_inner {
+		  position: relative;
+
+		  .plus {
+			  @include fontMuseoSuperLight;
+			  font-style: normal;
+			  position: absolute;
+			  font-size: 36px;
+			  top: -22px;
+			  right: -20px;
+			  @include breakpoint(max-width 670px) {
+				  font-size: 30px;
+			  }
+		  }
+	  }
+	}
+}
+
+#{$b}__subtext {
+  	padding-top: 1em;
+  	line-height: 100%;
+  	text-transform: uppercase;
+	display: block;
+	font-size: 18px;
+	@include fontMuseoSuperBold;
+	color: rgba($brown, .6);
+	letter-spacing: 2px;
+	@include breakpoint(max-width 670px) {
+		font-size: 15px;
+	}
+	@include breakpoint(max-width 501px) {
+		font-size: 14px;
+	}
+}
+
+#{$b}__icon {
+  	height: inherit;
+  	line-height: 0;
+	@include span(5 of 12 last);
+	@include breakpoint(max-width 570px) {
+		@include span(full);
+		float: none;
+		width: 195px;
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0 auto;
+	}
+}
+
+#{$b}__icon_mobile {
+	display: none;
+	@include breakpoint(max-width 570px) {
+		display: block !important;
+	}
+}
+

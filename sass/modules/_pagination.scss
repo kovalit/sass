@@ -1,0 +1,52 @@
+/******************************** pagination ********************************/
+
+$b: ".pagination";
+
+#{$b} {
+	margin: 0 0 90px span(2 wider of 9);
+	@include breakpoint(max-width 900px) {
+		margin-bottom: 60px;
+	}
+	@include breakpoint(max-width 600px) {
+		margin-left: span(1 wider of 9);
+		margin-bottom: 30px;
+	}
+	@include breakpoint(max-width 500px) {
+		margin-left: span(1 of 9);
+	}
+
+}
+
+#{$b}__link {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	@include border-radius(16px);
+	@include fontMuseoLight;
+	font-size: 15px;
+	color: $blue;
+	text-decoration: none;
+	@include breakpoint(max-width 500px) {
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+	}
+
+	&:not(:first-child) {
+		margin-left: 8px;
+		@include breakpoint(max-width 500px) {
+			margin-left: 0;
+		}
+	}
+
+	&.active {
+		background-color: #EC664B;
+		color: $white;
+	}
+
+	a {
+		color: $blue;
+	}
+}

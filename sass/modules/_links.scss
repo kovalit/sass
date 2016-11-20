@@ -1,0 +1,22 @@
+/******************************** links ********************************/
+
+$b: ".link";
+
+#{$b} {
+	display: inline-block;
+	color: $white;
+  	@include fontMuseoSuperLight;
+  	font-size: 14px;
+  	text-decoration: none;
+}
+
+#{$b}_orange {
+  	color: $orange;
+}
+
+#{$b}_hiring {
+	padding-left: 10px;
+	margin-left: 10px;
+	line-height: 100%;
+	border-left: 1px solid $orange;
+}

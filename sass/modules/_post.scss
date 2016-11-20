@@ -1,0 +1,52 @@
+/******************************** post ********************************/
+
+$b: ".post";
+
+
+#{$b} {
+	padding-right: gutter(3);
+	@include breakpoint(max-width 900px) {
+		padding-right: 0;
+	}
+}
+
+#{$b}__back {
+	position: relative;
+	top: -3px;
+	font-size: 17px;
+
+	&:hover {
+		color: $blue;
+	}
+
+}
+
+#{$b}__title {
+	@include fontMuseoLight;
+	font-size: 27px !important;
+	line-height: 130% !important;
+	color: $blue;
+}
+
+#{$b}__img {
+	width: 260px;
+	max-width: 260px;
+	max-height: 180px;
+	margin: 21px 35px 0 0;
+	float: left;
+
+	@include breakpoint(max-width 500px) {
+		float: none;
+		margin: 15px 0 25px 0;
+	}
+
+	img {
+		width: 260px !important;
+		max-width: 260px !important;
+	}
+}
+
+#{$b}__share {
+	margin: 50px 0 20px 0;
+}
+

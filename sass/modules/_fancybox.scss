@@ -1,0 +1,12 @@
+/******************************** fancybox ********************************/
+
+$b: ".fancybox";
+
+
+#{$b}-close {
+	@include common-sp('fancybox_close');
+}
+
+#{$b}-overlay {
+	background: rgba($black, 0.6);
+}

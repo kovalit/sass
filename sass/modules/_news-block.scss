@@ -1,0 +1,48 @@
+/******************************** news-block ********************************/
+
+$b: ".news-block";
+
+#{$b} {
+	margin-bottom: 60px;
+	overflow: hidden;
+
+	@include breakpoint(max-width 700px) {
+		margin-bottom: 30px;
+	}
+}
+
+#{$b}__icon {
+	text-align: center;
+	margin-top: 65px;
+	@include breakpoint(max-width 700px) {
+		display: none;
+	}
+}
+
+#{$b}__title {
+	text-align: center;
+
+	.text_main-title {
+		@include breakpoint(max-width 460px) {
+			font-size: 60px !important;
+		}
+	}
+
+	@include breakpoint(max-width 700px) {
+		display: none;
+	}
+}
+
+#{$b}__button {
+	width: span(1.9 of 12);
+	margin: 87px auto 0 auto;
+
+	@include breakpoint(max-width 700px) {
+		width: span(4 of 12);
+		margin-top: 30px;
+	}
+
+	@include breakpoint(max-width 700px) {
+		width: span(6 of 12);
+	}
+}

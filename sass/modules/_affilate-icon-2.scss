@@ -1,0 +1,68 @@
+/******************************** affilate-icon-2 ********************************/
+
+//sprite
+
+$affilate-icon-2-spacing: 5px;
+@import "inner-pages/affilate/icons/affilate-icon-2/*.png";
+
+@mixin affilate-icon-2-sp($name) {
+	@include affilate-icon-2-sprite($name);
+	width: affilate-icon-2-sprite-width($name);
+	height: affilate-icon-2-sprite-height($name);
+}
+
+
+$b: ".affilate-icon-2";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+
+	i {
+		display: block;
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+}
+
+
+#{$b}__doll_1 {
+	@include affilate-icon-2-sp('doll_1');
+	top: 33px;
+	left: 86px;
+}
+
+#{$b}__doll_2 {
+	@include affilate-icon-2-sp('doll_2');
+	bottom: 30px;
+	right: 98px;
+}
+
+#{$b}__doll_3 {
+	@include affilate-icon-2-sp('doll_3');
+	bottom: 17px;
+	left: 92px;
+}
+
+#{$b}__doll_4 {
+	@include affilate-icon-2-sp('doll_2');
+	top: 69px;
+	left: 44px;
+}
+
+#{$b}__doll_5 {
+	@include affilate-icon-2-sp('doll_4');
+	top: 56px;
+	right: 25px;
+	z-index: 10;
+}
+
+#{$b}__chart {
+	@include affilate-icon-2-sp('chart');
+	top: 35px;
+	left: 34px;
+}

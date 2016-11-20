@@ -1,0 +1,53 @@
+/******************************** phone ********************************/
+
+$b: ".phone";
+
+#{$b} {
+	display: inline-block;
+	width: 100%;
+	@include breakpoint(600px) {
+		@include image-with-dimentions("inner-pages/advertisers/icons/common/phone_blue.png");
+	}
+	position: relative;
+}
+
+#{$b}__screen {
+	width: 407px;
+	height: 223px;
+	@include breakpoint(max-width 600px) {
+		width: 100%;
+	}
+	@include breakpoint(600px) {
+		position: absolute;
+		top: 38px;
+		left: 110px;
+	}
+}
+
+#{$b}__icon {
+	display: none;
+  	&:first-child {
+	  display: block;
+	}
+}
+
+
+//advertise
+
+#{$b}_advertise {
+  @for $i from 1 through 4 {
+	#{$b}__icon_#{$i} {
+	  .icon_phone {
+		@include image-with-dimentions("inner-pages/advertisers/icons/phone/icon_#{$i}.jpg");
+		background-repeat: no-repeat;
+		@include breakpoint(max-width 600px) {
+			  @include background-size(100%);
+		}
+	    @include breakpoint(max-width 400px) {
+			  width: 100%;
+			  height: 249px;
+	 	}
+	  }
+	}
+  }
+}

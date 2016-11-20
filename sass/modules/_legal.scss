@@ -1,0 +1,45 @@
+/******************************** legal ********************************/
+
+$b: ".legal";
+
+
+#{$b} {
+	padding: 15px 1% 30px 1%;
+	@include fontMuseoLight;
+	color: $blue;
+	
+	@include breakpoint(max-width 900px) {
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		font-size: 15px;
+	}
+
+	h4 {
+		margin: 25px 0 20px 0;
+		@include fontMuseoLight;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	ul {
+		padding-left: 20px;
+
+		&.circle {
+			list-style-type: circle;
+			padding-left: 40px;
+		}
+	}
+
+	li {
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+	
+	
+}
+
+#{$b}__title {
+	margin-top: 40px;
+	font-size: 21px;
+	text-transform: uppercase;
+}

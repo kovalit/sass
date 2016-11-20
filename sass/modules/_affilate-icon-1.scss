@@ -1,0 +1,88 @@
+/******************************** affilate-icon-1 ********************************/
+
+//sprite
+$affilate-icon-1-spacing: 5px;
+@import "inner-pages/affilate/icons/affilate-icon-1/*.png";
+
+@mixin affilate-icon-1-sp($name) {
+	@include affilate-icon-1-sprite($name);
+	width: affilate-icon-1-sprite-width($name);
+	height: affilate-icon-1-sprite-height($name);
+}
+
+
+$b: ".affilate-icon-1";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+
+	i {
+		display: block;
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+}
+
+#{$b}__doll_1 {
+	@include affilate-icon-1-sp('doll_1');
+	top: 10px;
+	left: 39%;
+}
+
+#{$b}__doll_2 {
+	@include affilate-icon-1-sp('doll_2');
+	top: 45px;
+	left: 65px;
+}
+
+#{$b}__doll_3 {
+	@include affilate-icon-1-sp('doll_3');
+	bottom: 28px;
+	left: 88px;
+}
+
+#{$b}__doll_4 {
+	@include affilate-icon-1-sp('doll_4');
+	bottom: 67px;
+	right: 43px;
+}
+
+#{$b}__gold_1 {
+	@include affilate-icon-1-sp('gold_1');
+	top: 60px;
+	left: -5px;
+	z-index: 10;
+}
+
+#{$b}__gold_2 {
+	@include affilate-icon-1-sp('gold_2');
+	top: 105px;
+	right: -25px;
+	z-index: 10;
+
+}
+
+#{$b}__gold_3 {
+	@include affilate-icon-1-sp('gold_3');
+	bottom: -10px;
+	left: 50%;
+	margin-left: -22px;
+}
+
+#{$b}__hands {
+	@include affilate-icon-1-sp('hands');
+	top: 28%;
+	left: -2px;
+
+}
+
+#{$b}__note {
+	@include affilate-icon-1-sp('note');
+	top: 30px;
+	right: 65px;
+}

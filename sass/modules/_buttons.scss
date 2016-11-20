@@ -1,0 +1,91 @@
+/******************************** buttons ********************************/
+
+$b: ".button";
+
+#{$b} {
+	width: 100%;
+	@include box-sizing(border-box);
+	border: 2px solid transparent;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: transparent;
+	transition: color .2s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
+}
+
+#{$b}_small {
+	height: 46px;
+	line-height: 43px;
+	font-size: 17px;
+	@include fontMuseoLight;
+}
+
+#{$b}_big {
+	height: 53px;
+	line-height: 51px;
+	font-size: 19px;
+	@include fontMuseo;
+}
+
+#{$b}_orange {
+	color: $orange;
+	border-color: $orange;
+}
+
+#{$b}_orange_hover {
+	&:hover {
+		background-color: $orange;
+		border-color: $orange;
+		color: $white;
+	}
+}
+
+#{$b}_white {
+	color: $white;
+	border-color: $white;
+}
+
+#{$b}_background_orange {
+	background-color: $orange;
+	color: $white;
+	&:hover {
+		color: $orange;
+		border-color: $orange;
+		background-color: transparent;
+	}
+}
+
+#{$b}_color_white {
+	color: $white;
+	&:hover {
+		color: $orange;
+	}
+}
+
+#{$b}_color_blue {
+	color: #4C4D63;
+	&:hover {
+		color: $orange;
+	}
+}
+
+#{$b}_uppercase {
+	text-transform: uppercase;
+}
+
+#{$b}_bold {
+	@include fontMuseoSuperBold;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+#{$b}_inline {
+  display: inline-block;
+}
+
+#{$b}_pdf{
+  padding: 0px 15px;
+  width: 30%;
+  margin: 12px 5%;
+  min-width: 325px;
+}

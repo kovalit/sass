@@ -1,0 +1,323 @@
+/******************************** icons ********************************/
+
+
+//sprites
+$advantages-spacing: 5px;
+$common-spacing: 5px;
+$targeting-spacing: 5px;
+$abreast-spacing: 5px;
+$format-spacing: 5px;
+$profit-spacing: 5px;
+$profit-track-spacing: 5px;
+$traffic-spacing: 5px;
+$company-spacing: 5px;
+@import "icons/common/*.png";
+@import "inner-pages/advertisers/icons/targeting/*.png";
+@import "inner-pages/advertisers/icons/abreast/*.png";
+@import "inner-pages/advertisers/icons/format/*.png";
+@import "inner-pages/developers/icons/profit/*.png";
+@import "inner-pages/affilate/icons/profit-track/*.png";
+@import "inner-pages/affilate/icons/traffic/*.png";
+@import "inner-pages/company/icons/company/*.png";
+@import "icons/advantages/*.png";
+
+
+@mixin advantages-sp($name) {
+	@include advantages-sprite($name);
+	width: advantages-sprite-width($name);
+	height: advantages-sprite-height($name);
+}
+
+@mixin common-sp($name) {
+	@include common-sprite($name);
+	width: common-sprite-width($name);
+	height: common-sprite-height($name);
+}
+
+@mixin targeting-sp($name) {
+	@include targeting-sprite($name);
+	width: targeting-sprite-width($name);
+	height: targeting-sprite-height($name);
+}
+
+@mixin abreast-sp($name) {
+	@include abreast-sprite($name);
+	width: abreast-sprite-width($name);
+	height: abreast-sprite-height($name);
+}
+
+@mixin format-sp($name) {
+	@include format-sprite($name);
+	width: format-sprite-width($name);
+	height: format-sprite-height($name);
+}
+
+@mixin profit-sp($name) {
+	@include profit-sprite($name);
+	width: profit-sprite-width($name);
+	height: profit-sprite-height($name);
+}
+
+@mixin profit-track-sp($name) {
+	@include profit-track-sprite($name);
+	width: profit-track-sprite-width($name);
+	height: profit-track-sprite-height($name);
+}
+
+@mixin traffic-sp($name) {
+	@include traffic-sprite($name);
+	width: traffic-sprite-width($name);
+	height: traffic-sprite-height($name);
+}
+
+@mixin company-sp($name) {
+	@include company-sprite($name);
+	width: company-sprite-width($name);
+	height: company-sprite-height($name);
+}
+
+/*****************************************/
+
+$b: ".icon";
+
+#{$b} {
+	display: inline-block;
+}
+
+#{$b}_logo {
+	@include common-sp('icon_logo');
+  	background-repeat: no-repeat;
+	vertical-align: middle;
+	position: relative;
+
+	@include breakpoint(max-width 1080px) {
+		background: url('/images/icons/common/icon_logo_small.png');
+		background-repeat: no-repeat;
+		width: 36px;
+		height: 41px;
+	}
+}
+
+#{$b}_menu {
+	@include common-sp('menu');
+
+	&.active {
+		@include common-sp('menu_close');
+	}
+}
+
+#{$b}_start {
+	@include common-sp('start');
+	margin-right: 25px;
+}
+
+.promo-line.active {
+	#{$b}_start {
+		@include common-sp('start_h');
+		margin-right: 25px;
+	}
+}
+
+
+//advatage
+
+@for $i from 1 through 4 {
+	.info-block-item_#{$i} {
+		@extend .info-block-item;
+		#{$b}_advantage {
+			@include advantages-sp("icon_#{$i}");
+		 	background-repeat: no-repeat;
+		}
+	}
+}
+
+//format
+
+.info-block_hover {
+	@for $i from 1 through 4 {
+		.info-block-item_#{$i} {
+			#{$b}_format {
+				@include format-sp("icon_#{$i}");
+				background-repeat: no-repeat;
+			}
+
+			&:hover {
+				#{$b}_format {
+					@include format-sp("icon_#{$i}_h");
+				}
+			}
+		}
+	}
+}
+
+.info-block_click {
+	@for $i from 1 through 4 {
+		.info-block-item.active.info-block-item_#{$i} {
+			#{$b}_format {
+				@include format-sp("icon_#{$i}_h");
+			}
+		}
+	}
+}
+
+
+
+//targeting
+
+@for $i from 1 through 4 {
+	.info-block-item_#{$i} {
+		#{$b}_target {
+			@include targeting-sp("icon_#{$i}");
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+
+//abreast
+
+@for $i from 1 through 3 {
+	.info-block-item_#{$i} {
+		#{$b}_abreast {
+			@include abreast-sp("icon_#{$i}");
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+
+
+//profit
+
+@for $i from 1 through 4 {
+	.info-block-item_#{$i} {
+		#{$b}_profit {
+			@include profit-sp("icon_#{$i}");
+		}
+	}
+}
+
+//profit-track
+
+@for $i from 1 through 3 {
+	.info-block-item_#{$i} {
+		#{$b}_profit-track {
+			@include profit-track-sp("icon_#{$i}");
+		}
+	}
+}
+
+
+//partners
+
+@for $i from 1 through 28 {
+	#{$b}_partner_#{$i} {
+		@include image-with-dimentions("icons/partners/icon_#{$i}.jpg");
+		display: inline-block;
+		height: 55px !important;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
+
+//traffic
+
+@for $i from 1 through 4 {
+	.info-block-item_#{$i} {
+		#{$b}_traffic {
+			@include traffic-sp("icon_#{$i}");
+		}
+	}
+}
+
+//company
+
+@for $i from 1 through 2 {
+		#{$b}_company_#{$i} {
+			@include company-sp("icon_#{$i}");
+		}
+	}
+
+
+//achievements
+
+#{$b}_achiev {
+	width: 195px;
+	height: 195px;
+	display: inline-block;
+	@include border-radius(100px);
+	background: #655747;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+@for $i from 1 through 3 {
+	#{$b}_achiev_#{$i} {
+		#{$b}_img {
+			background: image-url("icons/achievements/icon_#{$i}.png");
+			width: inherit;
+			height: inherit;
+			background-repeat: no-repeat !important; //3rd image bug without !important
+		}
+	}
+}
+
+#{$b}_achiev_1  #{$b}_img {
+	background-position: 50% 100%;
+}
+
+#{$b}_achiev_2  #{$b}_img {
+	background-position: 100% 53%;
+}
+
+#{$b}_achiev_3  #{$b}_img {
+	background-position: 93.5% 68%;
+}
+
+//news
+
+#{$b}_news {
+  @include common-sp('news');
+  background-repeat: no-repeat;
+}
+
+//
+
+#{$b}_scroll {
+	@include common-sp('scroll-down');
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#{$b}_linkedin {
+	display: inline-block; 
+	width: 24px; 
+	height: 24px; 
+	margin: 0 0 -5px 10px;
+	background: url("/images/icons/common/linkedin.png")
+}
+
+//error
+
+//#{$b}_error {
+//	@include common-sp('error');
+//}
+
+
+//arrow content-top
+
+#arrow {
+	@include common-sp('content-top');
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	display: none;
+	opacity: .6;
+	z-index: 1000;
+
+	&:hover {
+		opacity: .8;
+	}
+}
+

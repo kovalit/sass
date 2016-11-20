@@ -1,0 +1,96 @@
+/******************************** common ********************************/
+
+//colors
+$white: #FFF;
+$black: #000;
+$orange: #E88900;
+$yellow: #F4C572;
+$grey: #655746;
+$blue: #4C4D63;
+$brown: #433A31;
+$brown-medium: #9E764B;
+$brown-light: #e5ded2;
+
+
+//grid
+$susy: (
+  global-box-sizing: border-box
+);
+
+
+//font
+
+@mixin fontMuseoSuperLight {
+	font-family: "Museo Sans W01 100", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+}
+
+@mixin fontMuseoLight {
+	font-family: "Museo Sans W01 300", Helvetica, Arial, sans-serif;
+	font-weight: 200;
+}
+
+@mixin fontMuseoLightPost {
+	font-family: "Museo Sans W01 300", Helvetica, Arial, sans-serif !important;
+	font-weight: 200;
+}
+
+@mixin fontMuseo {
+	font-family: "Museo Sans W01 500", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+@mixin fontMuseoBold {
+	font-family: "Museo Sans W01 700", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+@mixin fontMuseoSuperBold {
+	font-family: "Museo Sans W01 900", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+}
+
+//html and body
+
+html, body {
+min-height: 100%;
+height: 100%;
+}
+
+body {
+	font-family: "Myriad pro", Helvetica, Arial, sans-serif;
+	position: relative;
+}
+
+a {
+	@include fontMuseoLight;
+    font-size: 15px;
+    color: $orange;
+    text-decoration: none;
+
+    &:hover {
+    	color: $blue;
+    }
+}
+
+.top-position {
+	display: block;
+	width: inherit;
+	height: inherit;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content_middle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.push-to-left {
+	left: -300px;
+}
+
+
+
+

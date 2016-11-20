@@ -1,0 +1,64 @@
+/******************************** advertising model ********************************/
+
+$b: ".adv-model";
+
+#{$b} {
+	clear: both;
+	text-align: center;
+	margin: 47px 0 64px 0;
+	padding-top: 32px;
+	position: relative;
+}
+
+#{$b}__line {
+	border-top: 1px solid $orange;
+	width: 190px;
+	position: absolute;
+	top: 0;
+  	left: 50%;
+  	margin-left: -95px;
+}
+
+#{$b}__text {
+	font-size: 21px;
+	color: $blue;
+	@include fontMuseoLight;
+	@include breakpoint(max-width 950px) {
+		font-size: 17px;
+	}
+	@include breakpoint(max-width 590px) {
+		font-size: 14px;
+	}
+	@include breakpoint(max-width 420px) {
+		@include gutter(3);
+	}
+}
+
+#{$b}__list {
+	padding-top: 6px;
+	li {
+		display: inline-block;
+		font-size: 18px;
+		@include fontMuseoSuperBold;
+		color: $orange;
+		padding: 0 25px;
+		@include breakpoint(max-width 1000px) {
+			font-size: 16px;
+		}
+		@include breakpoint(max-width 700px) {
+			font-size: 14px;
+			padding: 0 15px;
+		}
+		&:not(:last-child) {
+			position: relative;
+			@include after {
+				border: 2px solid $orange;
+				@include border-radius(2px);
+				position: absolute;
+				top: 35%;
+				right: -5px;
+			}
+		}
+
+	}
+}

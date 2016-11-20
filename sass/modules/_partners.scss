@@ -1,0 +1,13 @@
+/******************************** partners ********************************/
+
+$b: ".partners";
+
+#{$b} {
+	@extend %clearfix;
+	padding: 40px 0;
+}
+
+#{$b}__item {
+	text-align: center;
+	height: 55px !important;
+}

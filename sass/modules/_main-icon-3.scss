@@ -1,0 +1,77 @@
+/******************************** main-icon-3 ********************************/
+
+//sprite
+$main-icon-3-spacing: 5px;
+@import "icons/best/main-icon-3/*.png";
+
+@mixin main-icon-3-sp($name) {
+	@include main-icon-3-sprite($name);
+	width: main-icon-3-sprite-width($name);
+	height: main-icon-3-sprite-height($name);
+}
+
+
+$b: ".main-icon-3";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+	i {
+	  display: block;
+	  position: absolute;
+	  background-repeat: no-repeat;
+	}
+}
+
+#{$b}__laptop {
+	@include main-icon-3-sp('notebook');
+	position: absolute;
+	bottom: 42px;
+	left: -2px;
+	z-index: 2;
+}
+
+#{$b}__screen {
+	width: 147px;
+	height: 74px;
+	position: absolute;
+	bottom: 80px;
+	left: 40px;
+	z-index: 2;
+}
+
+#{$b}__earth {
+	@include main-icon-3-sp('earth');
+	top: 28px;
+	right: -20px;
+}
+
+#{$b}__gear_1 {
+	@include main-icon-3-sp('gear_1');
+	top: 36px;
+	left: 40px;
+}
+
+#{$b}__gear_2 {
+	@include main-icon-3-sp('gear_2');
+	top: 46px;
+	left: 15px;
+}
+
+
+#{$b}__line_1 {
+	@include main-icon-3-sp('line_1');
+	top: 10px;
+	left: 60px;
+}
+
+#{$b}__arrow {
+	@include main-icon-3-sp('arrow');
+	top: 115px;
+	left: -5px;
+	z-index: 3;
+}

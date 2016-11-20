@@ -1,0 +1,24 @@
+/******************************** resources ********************************/
+
+$b: ".resources";
+
+#{$b} {
+	padding-top: 70px;
+	@include breakpoint(max-width 900px) {
+		padding-top: 44px;
+	}
+}
+
+#{$b}__main {
+	@include span(9 of 12);
+	@include breakpoint(max-width 900px) {
+		@include span(full);
+	}
+}
+
+#{$b}__sidebar {
+	@include span(3 last of 12);
+	@include breakpoint(max-width 900px) {
+		@include span(full);
+	}
+}

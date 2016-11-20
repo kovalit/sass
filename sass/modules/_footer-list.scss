@@ -1,0 +1,23 @@
+/******************************** footer-list ********************************/
+
+$b: ".footer-list";
+
+#{$b} {
+	a {
+		opacity: .8;
+		&:hover {
+				  color: $orange;
+				  opacity: 1
+				}
+	}
+}
+
+#{$b}__item {
+  	line-height: 160%;
+
+	@include breakpoint(max-width 650px) {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+}

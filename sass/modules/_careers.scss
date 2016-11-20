@@ -1,0 +1,87 @@
+/******************************** careers ********************************/
+
+$b: ".careers";
+
+#{$b} {
+	padding: 45px 0 50px 0;
+	@include breakpoint(max-width 590px) {
+		padding: 35px 0 40px 0;
+	}
+}
+
+#{$b}__title {
+	text-align: center;
+	@include fontMuseoSuperLight;
+	font-size: 76px;
+	color: $blue;
+	@include breakpoint(max-width 700px) {
+		font-size: 60px;
+	}
+	@include breakpoint(max-width 590px) {
+		font-size: 45px;
+	}
+	@include breakpoint(max-width 420px) {
+		font-size: 35px;
+	}
+}
+
+#{$b}__text, #{$b}__subtitle {
+	margin: 0;
+	text-align: center;
+	@include fontMuseoLight;
+	color: $blue;
+
+	&:first-of-type + & {
+		margin: 7px 0 37px 0;
+		@include breakpoint(max-width 590px) {
+			margin-bottom: 7px;
+		}
+	}
+
+	a {
+		color: $orange;
+		text-decoration: none;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+#{$b}__text, #{$b}__text a {
+	font-size: 21px;
+    
+    	@include breakpoint(max-width 700px) {
+		font-size: 17px;
+	}
+	@include breakpoint(max-width 590px) {
+		font-size: 14px;
+	}
+	@include breakpoint(max-width 420px) {
+		@include gutter(3);
+	}
+    
+}
+
+
+#{$b}__icon {
+	text-align: center;
+	margin-top: 68px;
+
+	@include breakpoint(max-width 590px) {
+		margin-top: 45px;
+	}
+}
+
+#{$b}__subtitle {
+	margin-top: 52px;
+	margin-bottom: 57px;
+	padding-top: 45px;
+	border-top: 1px solid $brown-light;
+
+	@include breakpoint(max-width 590px) {
+		margin-top: 40px;
+		margin-bottom: 30px;
+		padding-top: 30px;
+	}
+}

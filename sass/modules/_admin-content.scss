@@ -1,0 +1,111 @@
+/******************************** admin-content ********************************/
+
+.post, .position__content {
+
+	h1, h2, h3, h4, h5 {
+		@include fontMuseoLightPost;
+		color: $blue !important;
+		line-height: 130% !important;
+	}
+
+	h1 {
+		font-size: 31px !important;
+	}
+
+	h2 {
+		font-size: 25px !important;
+	}
+
+	h3 {
+		font-size: 19px !important;
+	}
+
+	h4 {
+		font-size: 21px !important;
+	}
+
+	h5 {
+		font-size: 8px !important;
+	}
+
+	p {
+		@include fontMuseoLightPost;
+		font-size: 15px !important;
+		color: $blue !important;
+		background-color: $white !important;
+		line-height: 180% !important;
+		margin-top: 15px !important;
+		margin-bottom: 0 !important;
+
+		@include breakpoint(max-width 700px) {
+			font-size: 13px !important;
+		}
+
+		span {
+			@include fontMuseoLightPost;
+			font-size: 15px !important;
+			color: $blue !important;
+			background-color: $white !important;
+			line-height: 180% !important;
+			margin-bottom: 0 !important;
+
+			@include breakpoint(max-width 700px) {
+				font-size: 13px !important;
+			}
+		}
+	}
+
+	a:hover {
+		color: $blue;
+	}
+
+	img {
+		max-width: 100% !important;
+		width: auto;
+		display: block !important;
+		margin: 0 auto;
+		height: auto;
+	}
+
+	ul {
+
+		margin-top: 25px;
+		li {
+			position: relative !important;
+			font-size: 15px !important;
+			margin-left: 40px !important;
+			margin-bottom: 16px !important;
+			@include fontMuseoLightPost;
+			color: $blue !important;
+			@include after {
+				width: 8px !important;
+				height: 8px !important;
+				@include border-radius(4px !important);
+				background-color: $brown-light !important;
+				position: absolute !important;
+				top: 8px !important;
+				left: -25px !important;
+			}
+
+			@include breakpoint(max-width 700px) {
+				font-size: 13px !important;
+			}
+		}
+	}
+
+	ol {
+		li {
+
+			margin-left: 20px !important;
+			margin-bottom: 15px !important;
+			@include fontMuseoLightPost;
+			font-size: 15px !important;
+			color: $blue !important;
+
+			@include breakpoint(max-width 700px) {
+				font-size: 13px !important;
+			}
+
+		}
+	}
+}

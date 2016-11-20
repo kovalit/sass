@@ -1,0 +1,58 @@
+/******************************** promo-line ********************************/
+
+$b: ".promo-line";
+
+#{$b} {
+	height: 90px;
+  	line-height: 90px;
+  	@extend %clearfix;
+//	@include breakpoint(max-width 800px) {
+//		display: none;
+//	}
+}
+
+#{$b}__text {
+	@include span(7 of 12);
+	@include gutter(4);
+  	text-align: left;
+  	@include fontMuseoSuperLight;
+  	font-size: 27px;
+  	color: $brown;
+}
+
+#{$b}__text_hover:hover {
+	cursor: pointer;
+	color: $orange;
+}
+
+#{$b}__button {
+	@include span(2 of 12 last);
+	margin-right: span(2 of 12);
+	&:hover {
+		cursor: pointer;
+	}
+	@include breakpoint(max-width 1000px) {
+		@include span(3 of 12 last);
+		margin-right: span(1 of 12);
+	}
+}
+
+.promo-line_start {
+	@include breakpoint(max-width 600px) {
+		#{$b}__text {
+			@include span(full);
+			float: none;
+			text-align: center;
+		}
+
+		#{$b}__button {
+			display: none;
+		}
+	}
+}
+
+.promo-line_main {
+	@include breakpoint(max-width 650px) {
+		display: none;
+	}
+}

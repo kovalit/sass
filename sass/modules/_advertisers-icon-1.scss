@@ -1,0 +1,79 @@
+/******************************** advertisers-icon-1 ********************************/
+
+//sprite
+$advertisers-icon-1-spacing: 5px;
+@import "inner-pages/advertisers/icons/fly/advertisers-icon-1/*.png";
+
+@mixin advertisers-icon-1-sp($name) {
+	@include advertisers-icon-1-sprite($name);
+	width: advertisers-icon-1-sprite-width($name);
+	height: advertisers-icon-1-sprite-height($name);
+}
+
+$b: ".advertisers-icon-1";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+	i {
+	  display: block;
+	  position: absolute;
+	  background-repeat: no-repeat;
+	}
+}
+
+
+#{$b}__coin_gold_1 {
+	@include  advertisers-icon-1-sp('gold_1');
+	top: 12px;
+	right: 45px;
+}
+
+#{$b}__coin_gold_2 {
+	@include  advertisers-icon-1-sp('gold_2');
+	top: 40px;
+	left: 70px;
+}
+
+#{$b}__coin_gold_3 {
+	@include  advertisers-icon-1-sp('gold_3');
+	bottom: 84px;
+	left: -5px;
+	z-index: 2;
+}
+
+#{$b}__coin_gold_4 {
+	@include  advertisers-icon-1-sp('gold_4');
+	top: 25px;
+	left: 20px;
+}
+
+#{$b}__coin_gold_5 {
+	@include  advertisers-icon-1-sp('gold_5');
+	top: 70px;
+	right: 15px;
+}
+
+#{$b}__coin_brown_1 {
+	@include  advertisers-icon-1-sp('brown_1');
+	bottom: 105px;
+	right: 50px;
+}
+
+#{$b}__coin_brown_2 {
+	@include  advertisers-icon-1-sp('brown_2');
+	bottom: 70px;
+	right: 40px;
+}
+
+#{$b}__hand {
+	background: image-url("inner-pages/advertisers/icons/fly/advertisers-icon-1/hand.png") no-repeat 42% 100%;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+}

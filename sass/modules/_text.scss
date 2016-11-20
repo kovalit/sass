@@ -1,0 +1,40 @@
+/******************************** text ********************************/
+
+$b: ".text";
+
+#{$b}_promo {
+	@include fontMuseoSuperLight;
+	font-size: 60px;
+	line-height: 115%;
+	color: $white;
+}
+
+#{$b}_main-title {
+	@include fontMuseoSuperLight;
+	font-size: 76px;
+}
+
+#{$b}_white {
+	color: $white !important;
+}
+
+#{$b}_blue {
+	color: $blue;
+}
+
+#{$b}_yellow {
+	color: $yellow !important;
+}
+
+#{$b}_black {
+	color: $black !important;
+}
+
+#{$b}_brown_medium {
+	color: $brown-medium !important;
+}
+
+#{$b}_inner {
+  position: relative;
+  display: inline-block;
+}

@@ -1,0 +1,41 @@
+/******************************** developers-icon-1 ********************************/
+
+$audience-spacing: 5px;
+@import "inner-pages/developers/icons/developers-icon-1/*.png";
+
+@mixin developers-icon-1-sp($name) {
+	@include developers-icon-1-sprite($name);
+	width: developers-icon-1-sprite-width($name);
+	height: developers-icon-1-sprite-height($name);
+}
+
+
+$b: ".developers-icon-1";
+
+#{$b} {
+	display: inline-block;
+	width: 260px;
+	height: 260px;
+	@include border-radius(130px);
+	background: #E8CAA6;
+	position: relative;
+
+	i {
+	  display: block;
+	  position: absolute;
+	  background-repeat: no-repeat;
+	}
+}
+
+#{$b}__map {
+	@include developers-icon-1-sp('map');
+	top: 75px;
+	left: 17px;
+}
+
+#{$b}__loop {
+	@include developers-icon-1-sp('hand');
+	top: 45px;
+	left: 1px;
+}
+

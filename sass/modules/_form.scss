@@ -1,0 +1,95 @@
+/******************************** form ********************************/
+
+input, textarea {
+	width: 100%;
+	@include box-sizing(border-box);
+	border: 2px solid $brown-light;
+	outline: none;
+	@include fontMuseoLight;
+	font-size: 13px;
+	color: $blue;
+
+	&.error {
+		border-color: #EA6750;
+	}
+}
+
+.required {
+	color: $orange;
+}
+
+input {
+	height: 46px;
+	padding-left: 10px;
+}
+
+input[type='checkbox'] {
+	width: 20px;
+	height: 20px;
+	padding: 0;
+}
+
+input[type='submit'] {
+	padding: 0;
+}
+
+textarea {
+	height: 116px;
+	resize: vertical;
+	padding: 10px;
+}
+
+$b: ".form";
+
+#{$b} {
+	width: 100%;
+}
+
+#{$b}__row {
+	margin: 3px 0  28px 0;
+}
+
+#{$b}__label {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	@include fontMuseoLight;
+	font-size: 15px;
+	color: $blue;
+
+	&.error {
+		color: #EA6750;
+	}
+}
+
+#{$b}__label_checkbox {
+	text-align: left;
+	display: inline;
+}
+
+.form__field_inline {
+	display: inline-block;
+}
+
+.form-message {
+	@include fontMuseoLight;
+	font-size: 21px;
+}
+
+.form-message_success {
+	color: $orange;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.errorSummary {
+	p {
+		font-size: 21px;
+		color: #EA6750;
+		text-align: center;
+	}
+
+	ul {
+		display: none !important;
+	}
+}

@@ -1,0 +1,9 @@
+/******************************** logo ********************************/
+
+$b: ".logo";
+
+#{$b} {
+	@include common-sp("logo");
+	background-repeat: no-repeat;
+	display: block;
+}
